@@ -1,0 +1,28 @@
+# Core AI Stack
+langchain>=0.1.0
+langgraph>=0.0.15
+openai>=1.10.0
+anthropic>=0.15.0
+
+# Vector DB & Data
+pinecone-client>=3.0.0
+chromadb>=0.4.0
+pydantic>=2.5.0
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Deep Learning (Optional for local inference/tuning)
+torch>=2.1.0
+transformers>=4.35.0
+sentence-transformers>=2.3.0
+
+# API & Streaming
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic-settings>=2.1.0
+gunicorn>=21.2.0
+
+# Monitoring & Eval
+langsmith>=0.1.0
+prometheus-client>=0.19.0
+python-dotenv>=1.0.0
