@@ -34,7 +34,38 @@ This project demonstrates high-scale AI engineering, focusing on the intersectio
 2. **Encryption In-Transit**: Mandatory TLS for all service-to-service communication.
 3. **Secret Isolation**: Zero hardcoded keys; all credentials fetched dynamically via the `SecurityEngine`.
 
-## 📈 Performance
+## 🏃 Getting Started
+
+This pipeline supports two execution modes: **DOCKER** (Full Production) and **SIMULATED** (Local Fast-Track).
+
+### 1. Unified Setup
+```bash
+# Clone the repository
+git clone https://github.com/exce11entt/ai-orchestrator.git
+cd ai-orchestrator
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 2. Configure Environment
+Create a `.env` file based on [.env.example](file:///c:/Users/Excellent/.gemini/antigravity/playground/prograde-pathfinder/.env.example):
+```bash
+PIPELINE_MODE=SIMULATED  # Set to DOCKER for Kafka use
+PINECONE_API_KEY=your_key
+```
+
+### 3. Execution (Simulated Mode)
+Run the orchestrator and the load tester in two separate terminals to see the 1M record blast:
+```bash
+# Terminal 1: The Brain
+python -m src.main
+
+# Terminal 2: The Data Blast
+python scripts/load_test_pro.py --records 1000000
+```
+
+## 📈 Performance & Scale Proof
 - **Target Scale**: 100,000,000+ Records
 - **Processing Latency**: < 800ms (End-to-End)
-- **Ingestion Speed**: Optimized for 50k+ records/sec per partition.
+- **Ingestion Speed**: Optimized for 50k+ records/sec per partition using Python's `multiprocessing` and Spark's partition-level parallelization.
