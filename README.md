@@ -41,8 +41,8 @@ This pipeline supports two execution modes: **DOCKER** (Full Production) and **S
 ### 1. Unified Setup
 ```bash
 # Clone the repository
-git clone https://github.com/exce11entt/ai-orchestrator.git
-cd ai-orchestrator
+git clone https://github.com/exce11entt/distributed-ai-pipeline.git
+cd distributed-ai-pipeline
 
 # Install dependencies
 pip install -r requirements.txt
