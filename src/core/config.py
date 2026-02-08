@@ -25,14 +25,15 @@ class Settings(BaseSettings):
     SPARK_EXECUTOR_MEMORY: str = "4g"
     SPARK_DRIVER_MEMORY: str = "2g"
 
-    # Pinecone
-    PINECONE_API_KEY: str
-    PINECONE_ENVIRONMENT: str
-    PINECONE_INDEX_NAME: str = "big-data-index"
+    # Chroma DB
+    CHROMA_HOST: str = "localhost"
+    CHROMA_PORT: int = 8000
+    CHROMA_COLLECTION: str = "distributed-intelligence"
 
     # AI & Security
     EMBEDDING_MODEL: str = "all-MiniLM-L6-v2"
     PII_SALT: str = "default_secure_salt"
+    OPENAI_API_KEY: Optional[str] = None
     MASTER_ENCRYPTION_KEY: Optional[str] = None
 
     def get_kafka_config(self) -> dict:

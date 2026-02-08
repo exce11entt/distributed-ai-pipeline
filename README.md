@@ -9,12 +9,12 @@ This project demonstrates high-scale AI engineering, focusing on the intersectio
 - **Scalable Ingestion**: Decoupled producer architecture using Kafka with TLS/SSL.
 - **Real-Time Anonymization**: Distributed PII scrubbing using PySpark UDFs.
 - **Massively Parallel Vectorization**: Partition-level embedding generation using `sentence-transformers`.
-- **High-Throughput Sink**: Optimized Pinecone gRPC upserts for 100M+ record indexing.
+- **High-Throughput Sink**: Optimized Chroma DB upserts for 100M+ record indexing.
 - **Enterprise Security**: HashiCorp Vault integration, end-to-end encryption, and automated audit trails.
 
 ## Tech Stack
 - **Frameworks**: PySpark (3.5+), Kafka, LangChain
-- **AI**: Sentence-Transformers, Pinecone (gRPC)
+- **AI**: Sentence-Transformers, Chroma DB (Self-Hosted)
 - **Security**: HashiCorp Vault, Fernet (AES-128), SHA-256 Salting
 - **Infrastructure**: Docker, Kubernetes, Prometheus/Grafana
 
