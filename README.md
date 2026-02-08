@@ -1,8 +1,8 @@
-# Secure Big Data AI Pipeline (100M+ Records)
+# Distributed Data Intelligence Pipeline
 
 A production-grade, security-first distributed pipeline for processing, anonymizing, and vectorizing massive datasets (100M+ records) in real-time.
 
-## 🚀 Overview
+## Overview
 This project demonstrates high-scale AI engineering, focusing on the intersection of **Big Data**, **Generative AI**, and **Cybersecurity**. It moves data from raw ingestion to a searchable vector database while maintaining absolute privacy and sub-second processing latency.
 
 ### Key Features
@@ -12,13 +12,13 @@ This project demonstrates high-scale AI engineering, focusing on the intersectio
 - **High-Throughput Sink**: Optimized Pinecone gRPC upserts for 100M+ record indexing.
 - **Enterprise Security**: HashiCorp Vault integration, end-to-end encryption, and automated audit trails.
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frameworks**: PySpark (3.5+), Kafka, LangChain
 - **AI**: Sentence-Transformers, Pinecone (gRPC)
 - **Security**: HashiCorp Vault, Fernet (AES-128), SHA-256 Salting
 - **Infrastructure**: Docker, Kubernetes, Prometheus/Grafana
 
-## 📂 Project Structure
+## Project Structure
 ```text
 ├── src/
 │   ├── core/           # Security, Config, Spark Factory
@@ -29,12 +29,12 @@ This project demonstrates high-scale AI engineering, focusing on the intersectio
 └── README.md
 ```
 
-## 🔒 Security Posture
+## Security Posture
 1. **PII Anonymization**: All sensitive user IDs and emails are salted and hashed before entering the vector store.
 2. **Encryption In-Transit**: Mandatory TLS for all service-to-service communication.
 3. **Secret Isolation**: Zero hardcoded keys; all credentials fetched dynamically via the `SecurityEngine`.
 
-## 🏃 Getting Started
+## Getting Started
 
 This pipeline supports two execution modes: **DOCKER** (Full Production) and **SIMULATED** (Local Fast-Track).
 
@@ -65,7 +65,7 @@ python -m src.main
 python scripts/load_test_pro.py --records 1000000
 ```
 
-## 📈 Performance & Scale Proof
+## Performance and Scale Proof
 - **Target Scale**: 100,000,000+ Records
 - **Processing Latency**: < 800ms (End-to-End)
 - **Ingestion Speed**: Optimized for 50k+ records/sec per partition using Python's `multiprocessing` and Spark's partition-level parallelization.
